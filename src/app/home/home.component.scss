@@ -1,0 +1,95 @@
+nav.navbar.navbar-inverse {
+  margin-bottom: 0;
+  border-radius: 0;
+  font-size: 16px;
+}
+
+.intro-header {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  text-align: center;
+  color: #f8f8f8; 
+  background: url(/assets/images/BRITANNICA_Photo_Walk_Chicago_September_2,_2013-4870.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.intro-message {
+  position: relative;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  button {
+    padding: 0 70px;
+    font-size: 20px;
+  }
+}
+
+.intro-message > h1 {
+  color: white;
+  margin: 0;
+  font-size: 5em;
+  font-weight: normal;
+}
+
+.intro-divider {
+  width: 400px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-message > h3 {
+  color: white;
+}
+
+.feature {
+  display: flex;
+  flex-direction: row;
+  padding: 30px 10px;
+
+  .image-feature {
+    background-size: cover;
+    //width: 511px;
+    //height: 285px;
+  }
+
+  .text-feature-wrapper {
+    text-align: center;
+    .title-feature {
+      font-size: 48px;
+      font-weight: 300;
+      color: #4c4c4c;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    .text-feature {
+      color: #555;
+      font-weight: 200;
+      font-size: 21px;
+      margin: 0;
+    }
+  }
+}
+
+
+@media(max-width:767px) {
+  .intro-message {
+    padding-bottom: 15%;
+  }
+
+  .intro-message > h1 {
+    font-size: 3em;
+  }
+
+  ul.intro-social-buttons > li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  ul.intro-social-buttons > li:last-child {
+    margin-bottom: 0;
+  }
+
+  .intro-divider {
+    width: 100%;
+  }
+}
