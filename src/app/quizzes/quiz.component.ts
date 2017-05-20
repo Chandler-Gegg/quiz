@@ -14,23 +14,24 @@ export class QuizComponent {
   public signUpForm: FormGroup;
   public formSubmitted: boolean = false;
   public validatorSubject: Subject<any>;
-
+  
   constructor(private _fb:FormBuilder) {
-    this.signUpForm = _fb.group({
-      full_name: ['', Validators.required],
-      username: ['', Validators.required],
-      email: ['', [
-        Validators.required,
-        Validators.pattern('.+?@.+?\\..+')]
-      ],
-      passwordGroup: _fb.group({
-        password: ['', [
-          Validators.required,
-          Validators.minLength(6)]
-        ],
-        passwordConfirmation: ['']
-      }, {validator: this.equalValidator })
-    });
+    // this.signUpForm = _fb.group({
+    //   full_name: ['', Validators.required],
+    //   username: ['', Validators.required],
+    //   email: ['', [
+    //     Validators.required,
+    //     Validators.pattern('.+?@.+?\\..+')]
+    //   ],
+    //   passwordGroup: _fb.group({
+    //     password: ['', [
+    //       Validators.required,
+    //       Validators.minLength(6)]
+    //     ],
+    //     passwordConfirmation: ['']
+    //   }, {validator: this.equalValidator })
+    // });
+
   }
 
   public equalValidator({value}:FormGroup): {[key: string]: boolean} {
