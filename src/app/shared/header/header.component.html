@@ -1,0 +1,12 @@
+<md-toolbar color="primary">
+  <span>Angular2-Survey</span>
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>
+  <div *ngIf="_tokenService.currentUserData" class="right-align-text">
+    <span [routerLink]="['/my-forms']">{{_tokenService.currentUserData?.username}}</span>
+    <span>
+      <span (click)="signOut()" ><md-icon>exit_to_app</md-icon></span>
+    </span>
+  </div>
+
+</md-toolbar>
