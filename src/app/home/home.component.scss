@@ -93,3 +93,13 @@ nav.navbar.navbar-inverse {
     width: 100%;
   }
 }
+
+$a-tags-hover: 'a:active, a:hover';
+$a-tags: 'a, a:active, a:hover, a:visited';
+#{$a-tags} {
+  color:white;
+  text-decoration: none;
+}
+#{$a-tags-hover} {
+  color: lightskyblue;
+}

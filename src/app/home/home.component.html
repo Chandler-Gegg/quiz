@@ -1,9 +1,12 @@
 <section>
   <div class="intro-header">
     <div class="intro-message">
-      <h1> Britannica Survey</h1>
+            
+      <a> 
+        <h1 [routerLink]="['/quiz']"> Britannica Survey</h1> 
+      </a>
       <hr class="intro-divider">
-      <button md-raised-button color="primary" [routerLink]="['/sign-up']">{{'Join us' | uppercase}}</button>
+      <!--<button class="btn btn-primary btn-success" [routerLink]="['/quiz']">{{'quiz' | uppercase}}</button>-->
     </div>
   </div>
 </section>
