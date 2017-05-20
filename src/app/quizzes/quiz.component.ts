@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms'
 // import {AuthService} from '../shared/services/auth.service'
 import {Observable, Subject} from "rxjs";
+import {QuizDataService} from '../shared/services/quiz-data.service';
 
 @Component({
   selector: 'survey-sign-up',
@@ -14,8 +15,14 @@ export class QuizComponent {
   public signUpForm: FormGroup;
   public formSubmitted: boolean = false;
   public validatorSubject: Subject<any>;
-  
-  constructor(private _fb:FormBuilder) {
+  public quiz;
+
+  constructor(
+    private _fb:FormBuilder,
+    private quizDataService: QuizDataService 
+  ) {
+
+
     // this.signUpForm = _fb.group({
     //   full_name: ['', Validators.required],
     //   username: ['', Validators.required],
