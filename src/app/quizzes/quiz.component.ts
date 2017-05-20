@@ -5,11 +5,11 @@ import {Observable, Subject} from "rxjs";
 
 @Component({
   selector: 'survey-sign-up',
-  templateUrl: './quizzes.component.html',
-  styleUrls: ['./quizzes.component.scss'],
+  templateUrl: './quiz.component.html',
+  styleUrls: ['./quiz.component.scss'],
   providers: []
 })
-export class QuizzesComponent {
+export class QuizComponent {
 
   public signUpForm: FormGroup;
   public formSubmitted: boolean = false;

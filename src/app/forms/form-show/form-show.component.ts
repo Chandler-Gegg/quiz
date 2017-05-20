@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {Survey} from "../../shared/classes/survey";
+// import {Survey} from "../../shared/classes/survey";
 import {Question} from "../../shared/classes/question";
 import { FieldComponent } from '../../shared/field/field.component';
 
@@ -12,7 +12,7 @@ import { FieldComponent } from '../../shared/field/field.component';
 })
 export class FormShowComponent {
 
-  public survey: Survey;
+  public survey: any;
   public questions: any[];
   constructor(private route: ActivatedRoute, private router: Router) {
     this.survey = this.route.snapshot.data['survey'];

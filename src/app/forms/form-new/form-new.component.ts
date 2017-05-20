@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Question } from "../../shared/classes/question";
 import { FieldComponent } from '../../shared/field/field.component';
-import { Survey } from '../../shared/classes/survey';
+// import { Survey } from '../../shared/classes/survey';
 import {SurveyService} from '../../shared/services/survey.service';
 import {Router} from '@angular/router';
 
@@ -31,10 +31,10 @@ export class FormNewComponent {
 
   public questions:Question[] = [this.initialQuestion];
 
-  public form:Survey;
+  public form:any;
 
   constructor(private _surveyService:SurveyService, private router: Router) {
-    this.form = new Survey('');
+    this.form = {};//new Survey('');
     this.form.questions = this.questions;
   }
 

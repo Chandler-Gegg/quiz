@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Angular2TokenService} from 'angular2-token';
+// import {Angular2TokenService} from 'angular2-token';
 import { Router } from '@angular/router'
 
 @Component({
@@ -9,7 +9,7 @@ import { Router } from '@angular/router'
 })
 export class HeaderComponent {
 
-  constructor(private _tokenService: Angular2TokenService,
+  constructor(private _tokenService,
               private router: Router) { }
 
   signOut() {

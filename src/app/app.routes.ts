@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
 import { HomeRoutes } from './home/home.routes';
-import { QuizzesRoutes } from './quizzes/quizzes.routes';
+import { QuizRoutes } from './quizzes/quiz.routes';
 
 export const routes: Routes = [
     ...HomeRoutes,
-    ...QuizzesRoutes
+    ...QuizRoutes
 //   ...SignUpRoutes,
 //   ...SignInRoutes,
 //   ...FormsRouter
