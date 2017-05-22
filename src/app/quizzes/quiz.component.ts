@@ -21,8 +21,11 @@ export class QuizComponent {
     private _fb:FormBuilder,
     private quizDataService: QuizDataService 
   ) {
+    this.quiz = this.quizDataService.getQuizData();
 
-
+    console.log('QUIZ DATA');
+    console.log(this.quiz);
+    console.log('QUIZ DATA');
     // this.signUpForm = _fb.group({
     //   full_name: ['', Validators.required],
     //   username: ['', Validators.required],

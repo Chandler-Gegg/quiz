@@ -1,6 +1,6 @@
-class QuizData {
+export class QuizData {
     details;
-    questions;
+    surveyQuestions;
     constructor() {
         this.details = {
             "id":5011,
@@ -68,7 +68,7 @@ class QuizData {
             "identifier":"5011"
         };
     
-        this.questions = [
+        this.surveyQuestions = [
             {
                 "type":"TRUE_FALSE",
                 "level":1,
@@ -89,7 +89,8 @@ class QuizData {
                     "Fiction"
                 ],
                 "correct":1,
-                "explanation":"Clark Kent was in love with Lana Lang. Then he went to Metropolis and fell in love with Lois Lane, the ace newspaper reporter."},
+                "explanation":"Clark Kent was in love with Lana Lang. Then he went to Metropolis and fell in love with Lois Lane, the ace newspaper reporter."
+            },
             {
                 "type":"TRUE_FALSE",
                 "level":1,

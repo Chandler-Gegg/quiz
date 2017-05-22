@@ -1,0 +1,42 @@
+<!--<form [formGroup]="superHeroesForm" novalidate>
+  <div class="form-group">
+    <label class="center-block">First Name:
+      <input class="form-control" formControlFirstName="firstName">
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">Last Name:
+      <input class="form-control" formControlLastName="lastName">
+    </label>
+  </div>  
+</form>-->
+
+
+<div class="container">  
+  <form>
+    <div *ngFor="let surveyQuestion of quiz.surveyQuestions"> 
+      <div class="form-group">
+        <span [innerHtml]="surveyQuestion.question"></span>
+        <div>
+          <input type="radio" name="surveyQuestion.question" [value]="surveyQuestion.answers[0]">
+          <label [innerHtml]="surveyQuestion.answers[0]"> </label>          
+        </div>
+        <div>
+          <input type="radio" name="surveyQuestion.question" [value]="surveyQuestion.answers[1]">
+          <label [innerHtml]="surveyQuestion.answers[1]"> </label>          
+        </div>
+        
+      </div>
+    </div>    
+    
+    <!--<div class="form-group">
+      <label for="firstName"> First Name</label>      
+      <input type="text" class="form-control" id="name" required>
+    </div>
+    <div class="form-group">
+      <label for="firstName"> Last Name</label>      
+      <input type="text" class="form-control" id="name" required>
+    </div>-->
+    <!--<button type="submit" class="btn btn-success">Submit</button>-->
+  </form>
+</div>
