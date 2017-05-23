@@ -1,10 +1,14 @@
 <div class="container"> 
   <div class="question-container"*ngFor="let surveyQuestion of quiz.surveyQuestions"> 
-    <h4  [innerHtml]="surveyQuestion.question"></h4>
+    <h4 [innerHtml]="surveyQuestion.question"></h4>
     <div>
       <div  *ngFor="let answer of surveyQuestion.answers" >
-        <div (click)="selectAnswer(surveyQuestion, answer)" class="answer-container">
-          <span class="answer answer-unselected"> {{answer}} </span>
+        <div class="answer-container">
+          <button (click)="selectAnswer($event, surveyQuestion, answer)" 
+            [ngClass]="{'answer-selected': surveyResponse[surveyQuestion.question] && 
+                        surveyResponse[surveyQuestion.question].userAnswer == answer}" 
+            class="btn btn-primary btn-warning"> {{answer}} 
+          </button>
         </div>
       </div>
     </div>                                

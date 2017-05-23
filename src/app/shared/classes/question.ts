@@ -1,5 +1,5 @@
 import {Option} from './option';
-export class Question {
+export class SurveyQuestion {
   id?: number;
   type: string;
   text: string;
