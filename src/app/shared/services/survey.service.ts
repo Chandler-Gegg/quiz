@@ -7,28 +7,28 @@ import {Observable} from "rxjs";
 @Injectable()
 export class SurveyService {
 
-  constructor(private _http:Http) { }
+  constructor(private http:Http) { }
 
   
   getSurveys(): Observable<any[]> {
-    return this._http
+    return this.http
       .get(`${environment.API}/surveys`)
       .map(res => res.json())
       .catch(error => Observable.of(error))
   }
 
   getSurvey(id): Observable<any> {
-    return this._http
+    return this.http
       .get(`${environment.API}/surveys/${id}`)
       .map(res => res.json())
       .catch(error => Observable.of(error))
   }
 
-  createSurvey(form): Observable<any> {
+  createSurvey(surveyResponse): Observable<any> {
     let data = {
-      survey: form
+      survey: surveyResponse
     }
-    return this._http
+    return this.http
       .post(`${environment.API}/surveys`, data)
       .map(res => res.json())
       .catch(error => Observable.of(error))

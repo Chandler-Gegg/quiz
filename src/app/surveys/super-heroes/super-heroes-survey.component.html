@@ -4,7 +4,7 @@
     <div>
       <div  *ngFor="let answer of surveyQuestion.answers" >
         <div class="answer-container">
-          <button (click)="selectAnswer($event, surveyQuestion, answer)" 
+          <button (click)="selectAnswer(surveyQuestion, answer)" 
             [ngClass]="{'answer-selected': surveyResponse[surveyQuestion.question] && 
                         surveyResponse[surveyQuestion.question].userAnswer == answer}" 
             class="btn btn-primary btn-warning"> {{answer}} 
@@ -13,5 +13,5 @@
       </div>
     </div>                                
   </div>            
-  <button (click)="onSubmit" type="submit" class="btn btn-success">Submit</button>  
+  <button (click)="onSubmit()" type="submit" class="btn btn-success">Submit</button>  
 </div>

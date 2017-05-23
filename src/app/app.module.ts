@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { QuizComponent } from './quizzes/quiz.component';
 import { SuperHeroesSurveyComponent } from './surveys/super-heroes/super-heroes-survey.component';
+import { SurveyResultsComponent } from './survey-results/survey-results.component';
 
 import { QuizDataService } from './shared/services/quiz-data.service';
 import {routes} from './app.routes';
@@ -19,7 +20,8 @@ import {routes} from './app.routes';
     AppComponent,
     HomeComponent,
     QuizComponent,    
-    SuperHeroesSurveyComponent
+    SuperHeroesSurveyComponent,
+    SurveyResultsComponent
   ],
   imports: [
     BrowserModule,
